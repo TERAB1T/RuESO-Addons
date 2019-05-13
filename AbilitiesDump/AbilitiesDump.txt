@@ -1,0 +1,7 @@
+## Title: AbilitiesDump
+## Author: RuESO Team (ElderScrolls.Net)
+## Version: 1.0
+## APIVersion: 100027
+## SavedVariables: AbilitiesDump_SavedVariables
+
+AbilitiesDump.lua

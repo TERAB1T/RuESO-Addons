@@ -1,0 +1,9 @@
+## Title: RuESO QA Old
+## Author: RuESO Team (ElderScrolls.Net)
+## Description: RuESO Quality Assurance
+## Version: 0.1
+## APIVersion: 100023
+## SavedVariables: RuESOQA_SavedVariables
+
+RuESOQA.lua
+RuESOQA.xml

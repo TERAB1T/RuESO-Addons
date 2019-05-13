@@ -1,0 +1,73 @@
+* GetNumSkillTypes()
+** _Returns:_ *integer* _numSkillTypes_
+
+* GetNumSkillLines(*[SkillType|#SkillType]* _skillType_)
+** _Returns:_ *integer* _numSkillLines_
+
+* GetSkillLineInfo(*[SkillType|#SkillType]* _skillType_, *luaindex* _skillIndex_)
+** _Returns:_ *string* _name_, *luaindex* _rank_, *bool* _discovered_, *integer* _skillLineId_, *bool* _advised_, *string* _unlockText_
+
+* GetNumSkillAbilities(*[SkillType|#SkillType]* _skillType_, *luaindex* _skillIndex_)
+** _Returns:_ *integer* _numAbilities_
+
+* GetSkillAbilityInfo(*[SkillType|#SkillType]* _skillType_, *luaindex* _skillIndex_, *luaindex* _abilityIndex_)
+** _Returns:_ *string* _name_, *textureName* _texture_, *luaindex* _earnedRank_, *bool* _passive_, *bool* _ultimate_, *bool* _purchased_, *luaindex:nilable* _progressionIndex_, *luaindex:nilable* _rankIndex_
+
+* GetSpecificSkillAbilityInfo(*[SkillType|#SkillType]* _skillType_, *luaindex* _skillIndex_, *luaindex* _abilityIndex_, *integer* _morphChoice_, *luaindex* _rankIndex_) <-- rankIndex начинается с нуля
+** _Returns:_ *integer* _abilityId_, *luaindex* _rankNeeded_
+
+* GetSpecificSkillAbilityKeysByAbilityId(*integer* _abilityId_)
+** _Returns:_ *[SkillType|#SkillType]* _skillType_, *luaindex* _skillIndex_, *luaindex* _abilityIndex_, *integer* _morphChoice_, *luaindex* _rankIndex_
+
+* GetSkillHighestRankIndexAvailableAtSkillLineRank(*[SkillType|#SkillType]* _skillType_, *luaindex* _skillIndex_, *luaindex* _abilityIndex_, *luaindex* _rank_)
+** _Returns:_ *luaindex:nilable* _rankIndex_
+
+* GetAbilityName(*integer* _abilityId_)
+** _Returns:_ *string* _abilityName_
+
+* IsAbilityPassive(*integer* _abilityId_)
+** _Returns:_ *bool* _isPassive_
+
+* IsAbilityPermanent(*integer* _abilityId_)
+** _Returns:_ *bool* _isPermanent_
+
+* GetAbilityCastInfo(*integer* _abilityId_)
+** _Returns:_ *bool* _channeled_, *integer* _castTime_, *integer* _channelTime_
+
+* GetAbilityTargetDescription(*integer* _abilityId_)
+** _Returns:_ *string:nilable* _targetDescription_
+
+* GetAbilityRange(*integer* _abilityId_)
+** _Returns:_ *integer* _minRangeCM_, *integer* _maxRangeCM_
+
+* GetAbilityRadius(*integer* _abilityId_)
+** _Returns:_ *integer* _radius_
+
+* GetAbilityAngleDistance(*integer* _abilityId_)
+** _Returns:_ *integer* _angleDistance_
+
+* GetAbilityDuration(*integer* _abilityId_)
+** _Returns:_ *integer* _duration_
+
+* GetAbilityIcon(*integer* _abilityId_)
+** _Returns:_ *textureName* _icon_
+
+* GetAbilityCost(*integer* _abilityId_)
+** _Returns:_ *integer* _cost_, *[CombatMechanicType|#CombatMechanicType]* _mechanic_
+
+* GetAbilityRoles(*integer* _abilityId_)
+** _Returns:_ *bool* _isTankRoleAbility_, *bool* _isHealerRoleAbility_, *bool* _isDamageRoleAbility_
+
+* GetAbilityDescriptionHeader(*integer* _abilityId_)
+** _Returns:_ *string* _header_
+
+* GetAbilityDescription(*integer* _abilityId_)
+** _Returns:_ *string* _description_
+
+* GetAbilityUpgradeLines(*integer* _abilityId_)
+** _Uses variable returns..._
+** _Returns:_ *string* _label_, *string* _oldValue_, *string* _newValue_
+
+* GetAbilityNewEffectLines(*integer* _abilityId_)
+** _Uses variable returns..._
+** _Returns:_ *string* _newEffect_

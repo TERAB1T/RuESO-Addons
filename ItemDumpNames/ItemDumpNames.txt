@@ -1,0 +1,8 @@
+## Title: ItemDumpNames
+## Author: RuESO Team (ElderScrolls.Net)
+## Version: 1.0
+## APIVersion: 100026 100027
+## SavedVariables: ItemDumpNames_SavedVariables
+
+data.lua
+ItemDumpNames.lua
