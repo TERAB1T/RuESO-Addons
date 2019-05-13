@@ -1,7 +1,7 @@
 ## Title: CrateDump
 ## Author: RuESO Team (ElderScrolls.Net)
 ## Version: 1.0
-## APIVersion: 100026 100027
+## APIVersion: 100027 100028
 ## SavedVariables: CrateDump_SavedVariables
 
 data.lua
