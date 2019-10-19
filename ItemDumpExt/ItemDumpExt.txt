@@ -1,9 +1,9 @@
-## Title: ItemDump
+## Title: ItemDumpExt
 ## Author: RuESO Team (ElderScrolls.Net)
 ## Version: 1.0
 ## APIVersion: 100029
-## SavedVariables: ItemDump_SavedVariables
+## SavedVariables: ItemDumpExt_SavedVariables
 
 data.lua
 dataQuest.lua
-ItemDump.lua
+ItemDumpExt.lua

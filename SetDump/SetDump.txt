@@ -1,0 +1,8 @@
+## Title: SetDump
+## Author: RuESO Team (ElderScrolls.Net)
+## Version: 1.0
+## APIVersion: 100027 100028
+## SavedVariables: SetDumpNames_SavedVariables
+
+data.lua
+SetDump.lua
