@@ -1,7 +1,7 @@
 ## Title: BooksDump
 ## Author: RuESO Team (ElderScrolls.Net)
 ## Version: 1.0
-## APIVersion: 100027 100028
+## APIVersion: 101034 101035
 ## SavedVariables: BooksDump_SavedVariables
 
 BooksDump.lua

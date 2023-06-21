@@ -1,0 +1,7 @@
+## Title: SetsDump
+## Author: TERAB1T
+## Version: 1.0
+## APIVersion: 100031 100032
+## SavedVariables: SetsDump_SavedVariables
+
+SetsDump.lua

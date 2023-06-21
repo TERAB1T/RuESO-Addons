@@ -1,0 +1,7 @@
+## Title: CollectibleDumpExt
+## Author: RuESO Team (ElderScrolls.Net)
+## Version: 1.0
+## APIVersion: 100029 100030
+## SavedVariables: CollectibleDumpExt_SavedVariables
+
+CollectibleDumpExt.lua

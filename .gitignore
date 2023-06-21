@@ -1,8 +1,12 @@
 # Framework symbolic links in addon folders
-*/Framework
+Framework/*
+GameplayHelper/*
+DownloadLatestFramework.bat
+debug tooltips.txt
 
 # Compiled addons
 *.zip
+*.rar
 
 # Links
 *.lnk

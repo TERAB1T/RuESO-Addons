@@ -1,8 +1,7 @@
 ## Title: FurnitureDump
 ## Author: RuESO Team (ElderScrolls.Net)
 ## Version: 1.0
-## APIVersion: 100029
+## APIVersion: 100031 100032
 ## SavedVariables: FurnitureDump_SavedVariables
 
-data.lua
 FurnitureDump.lua

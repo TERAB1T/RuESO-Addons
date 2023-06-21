@@ -8,7 +8,7 @@ local function CrateDump()
 	CrateDump_SavedVariables = {}
 	local collectibleDump = {}
 	
-	for i = 1, 10000 do
+	for i = 1, 20000 do
 		
 		local rewardName, rewardTypeText, cardFaceImage, cardFaceFrameAccentImage, stackCount = GetMarketProductCrownCrateRewardInfo(i)
 		rewardName = zo_strformat(SI_UNIT_NAME, rewardName)
@@ -50,27 +50,29 @@ local function CrateDump()
 		end
 	end
 	
-	for i in iterate(itemsForCrateDump) do
-		local itemName = GetItemLinkName("|H1:item:" .. i .. ":1:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0|h|h")
+	for i = 1, 300000 do
+		local contLink = string.format("|H1:item:%d:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0|h|h", i)
+		local itemName = GetItemLinkName(contLink)
 		
-		itemName = zo_strformat(SI_UNIT_NAME, itemName)
-		
-		if CrateDump_SavedVariables[itemName] and not CrateDump_SavedVariables[itemName]["description"] then
-			local itemIcon = GetItemLinkIcon("|H1:item:" .. i .. ":1:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0|h|h")
-			local itemFlavor = GetItemLinkFlavorText("|H1:item:" .. i .. ":1:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0|h|h")
-			local hasAbility, _, abilityDescription, cooldown = GetItemLinkOnUseAbilityInfo("|H1:item:" .. i .. ":1:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0|h|h")
-			
-			CrateDump_SavedVariables[itemName]["icon"] = itemIcon
-			
-			if itemFlavor ~= nil and itemFlavor ~= "" then
-				CrateDump_SavedVariables[itemName]["flavor"] = itemFlavor
-			end
-			
-			if hasAbility then
-				CrateDump_SavedVariables[itemName]["description"] = abilityDescription
+		if itemName and itemName ~= "" and not string.match(itemName, "_") then
+			itemName = zo_strformat(SI_UNIT_NAME, itemName)
+			if CrateDump_SavedVariables[itemName] and not CrateDump_SavedVariables[itemName]["description"] then
+				local itemIcon = GetItemLinkIcon(contLink)
+				local itemFlavor = GetItemLinkFlavorText(contLink)
+				local hasAbility, _, abilityDescription, cooldown = GetItemLinkOnUseAbilityInfo(contLink)
 				
-				if cooldown > 0 then
-					CrateDump_SavedVariables[itemName]["cooldown"] = cooldown/100
+				CrateDump_SavedVariables[itemName]["icon"] = itemIcon
+				
+				if itemFlavor ~= nil and itemFlavor ~= "" then
+					CrateDump_SavedVariables[itemName]["flavor"] = itemFlavor
+				end
+				
+				if hasAbility then
+					CrateDump_SavedVariables[itemName]["description"] = abilityDescription
+					
+					if cooldown > 0 then
+						CrateDump_SavedVariables[itemName]["cooldown"] = cooldown/100
+					end
 				end
 			end
 		end

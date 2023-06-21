@@ -1,13 +1,8 @@
-local function iterate(t)
-    local i = 0
-    return function() i = i + 1; return t[i] end
-end
-
 local function FurnitureDump()
 	
 	FurnitureDump_SavedVariables = {}
 	
-	for i in iterate(itemsForFurnitureDump) do
+	for i = 1, 300000 do
 		
 		local itemType, specItemType = GetItemLinkItemType("|H1:item:" .. i .. ":1:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0|h|h")
 		
